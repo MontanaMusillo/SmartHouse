@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Smart House</string>
+
+    <string name="warning">(The blue button is the current state of your objects.)</string>
+
+    <!-- MAIN MENU !-->
+    <string name="btn_home_control">Home Controls</string>
+    <string name="btn_heart_monitor">Heart Monitor</string>
+    <string name="btn_fingerprint">FingerPrint Options</string>
+    <string name="btn_other">Other Settings</string>
+
+    <!-- Home Control Submenu  -->
+    <string name="menu_homeControl">Home Control</string> <!-- Submenu title -->
+    <string name="btn1_homeControl">Windows</string>
+    <string name="btn1a_homeControl">Open</string>
+    <string name="btn1b_homeControl">Close</string>
+    <string name="btn2_homeControl">Door</string>
+    <string name="btn2a_homeControl">Open</string>
+    <string name="btn2b_homeControl">Close</string>
+    <string name="btn3_homeControl">Lights</string>
+    <string name="btn3a_homeControl">On</string>
+    <string name="btn3b_homeControl">Off</string>
+    <string name="btn4_homeControl">Gas Sensor Reading</string>
+    <string name="btn4a_homeControl">Smoke</string>
+    <string name="btn4b_homeControl">Alcohol</string>
+    <string name="btn4c_homeControl">CO2</string>
+    <string name="btn5_homeControl">Elevator</string>
+    <string name="btn5a_homeControl">First Floor</string>
+    <string name="btn5b_homeControl">Second Floor</string>
+
+
+
+    <!-- HeartMonitor Submenu -->
+    <string name="menu_heartMonitor">Heartbeat Monitor</string>
+
+    <!-- Fingerprint Submenu -->
+    <string name="menu_fingerPrint">FingerPrint System</string>
+
+    <!-- Other Settings Submenu -->
+    <string name="menu_other">Other Settings</string>
+
+
+
+
+    <string name="btn1_other">btn1</string>
+    <string name="btn2_other">btn2</string>
+    <string name="btn3_other">btn3</string>
+    <string name="btn4_other">btn4</string>
+    <string name="btn1">Button 1</string>
+    <string name="btn2">Button 2</string>
+    <string name="btn3">Button 3</string>
+    <string name="btn4">Button 4</string>
+
+
+
+
+</resources>

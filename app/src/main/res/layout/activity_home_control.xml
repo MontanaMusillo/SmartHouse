@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_google_signin_btn_text_dark_pressed"
+    android:showDividers="middle"
+    android:divider="@android:color/black"
+    tools:context=".homeControl">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_homeControl"
+        android:padding="10dp"
+        android:textSize="38dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="@android:color/black" >
+
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:text="@string/btn1_homeControl"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+
+             <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn1a_homeControl"
+                android:text="@string/btn1a_homeControl">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn1b_homeControl"
+                android:text="@string/btn1b_homeControl" >
+            </Button>
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="@android:color/black" >
+
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/btn2_homeControl"
+                android:gravity="start"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn2a_homeControl"
+                android:text="@string/btn2a_homeControl" >
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn2b_homeControl"
+                android:text="@string/btn2b_homeControl" >
+            </Button>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="@android:color/black" >
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/btn3_homeControl"
+                android:gravity="start"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn3a_homeControl"
+                android:text="@string/btn3a_homeControl" >
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn3b_homeControl"
+                android:text="@string/btn3b_homeControl" >
+            </Button>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:dividerPadding="@dimen/default_gap"
+            android:divider="@android:color/black" >
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/btn4_homeControl"
+                android:gravity="start"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn4a_homeControl"
+                android:text="@string/btn4a_homeControl" >
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn4b_homeControl"
+                android:text="@string/btn4b_homeControl" >
+            </Button>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/btn4c_homeControl"
+                android:text="@string/btn4c_homeControl" >
+            </Button>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:dividerPadding="@dimen/default_gap"
+        android:divider="@android:color/black" >
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/btn5_homeControl"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:id="@+id/homeControlBtn5a"
+            android:text="@string/btn5a_homeControl" >
+        </Button>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:id="@+id/homeControlBtn5b"
+            android:text="@string/btn5b_homeControl" >
+        </Button>
+
+    </LinearLayout>
+
+
+
+
+
+<ImageView
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="100dp"
+    android:background="@drawable/house"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:text="@string/warning"
+    android:textAllCaps="false"
+    android:textStyle="italic"
+    android:textColor="@android:color/black"
+    android:layout_gravity="center"
+    >
+</TextView>
+
+</LinearLayout>
