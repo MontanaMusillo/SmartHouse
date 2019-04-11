@@ -1,4 +1,14 @@
+//Firebase content found via:
+// https://www.youtube.com/watch?v=71H9-MRXYOE
+//https://medium.com/coinmonks/arduino-to-android-real-time-communication-for-iot-with-firebase-60df579f962
+// and various Google Firebase and Android Studio official tutorials and white-pages.
+
+//Firebase Includes and Packages:
 package com.example.smarthouse;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+//Normal Includes, Imports, and Packages:
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,9 +19,20 @@ import android.widget.Toast;
 import android.support.v7.widget.CardView;
 import android.graphics.Color;
 
+
 public class MainActivity extends AppCompatActivity
 //implements View.OnClickListener
 {
+    //Linking the database to firebase
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
+
+    //Instantiate the readings and pins
+    //Example
+    //final DatabaseReference ledstatus1 = myRef.child("led1").child("status");
+
+    //Button b1;
+    //TextView textView1;
 
 
     @Override
