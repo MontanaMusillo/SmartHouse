@@ -28,6 +28,8 @@
     <string name="btn5a_homeControl">First Floor</string>
     <string name="btn5b_homeControl">Second Floor</string>
 
+    <string name="btn6_homeControl">Humidity</string>
+    <string name="btn7_homeControl">Temperature</string>
 
 
     <!-- HeartMonitor Submenu -->

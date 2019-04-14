@@ -10,8 +10,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 //Normal Includes, Imports, and Packages:
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -19,20 +21,11 @@ import android.widget.Toast;
 import android.support.v7.widget.CardView;
 import android.graphics.Color;
 
-
 public class MainActivity extends AppCompatActivity
 //implements View.OnClickListener
 {
-    //Linking the database to firebase
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference();
 
-    //Instantiate the readings and pins
-    //Example
-    //final DatabaseReference ledstatus1 = myRef.child("led1").child("status");
 
-    //Button b1;
-    //TextView textView1;
 
 
     @Override
@@ -85,4 +78,12 @@ public class MainActivity extends AppCompatActivity
         startActivity(newActivity);
 
     }
+
+
+
+
+
+
+
+
 }

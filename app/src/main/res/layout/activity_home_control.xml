@@ -66,6 +66,14 @@
                 android:text="@string/btn1b_homeControl" >
             </Button>
 
+            <!--Switch
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/btn1c_homeControl"
+                android:layout_weight="1">
+            </Switch!-->
+
         </LinearLayout>
 
 
@@ -259,6 +267,70 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:dividerPadding="@dimen/default_gap"
+        android:divider="@android:color/black" >
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/btn6_homeControl"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:id="@+id/homeControlBtn6"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:dividerPadding="@dimen/default_gap"
+        android:divider="@android:color/black" >
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/btn7_homeControl"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:id="@+id/homeControlBtn7"
+            />
+
+    </LinearLayout>
 
 
 
@@ -266,7 +338,7 @@
     android:layout_width="250dp"
     android:layout_height="250dp"
     android:layout_gravity="center"
-    android:layout_marginTop="100dp"
+    android:layout_marginTop="50dp"
     android:background="@drawable/house"/>
 <TextView
     android:layout_width="wrap_content"
