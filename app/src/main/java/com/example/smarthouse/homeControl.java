@@ -1,14 +1,9 @@
 package com.example.smarthouse;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -17,89 +12,63 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
 public class homeControl extends AppCompatActivity
 {
+    TextView temperature; // id: btn7a_homeControl
+    Button lightOn; // id: @+id/btn3a_homeControl
+    Button lightOff; // id: @+id/btn3b_homeControl
 
-    private DatabaseReference myDatabase;
-    private TextView textView1; //humidity
-    private TextView textView2; //temp   //may not be private
-    //private Switch ledOnOff;
-    Button ledStatusON;
-    Button ledStatusOFF;
-
-
-    //Linking the database to firebase
-    // may not need?
-    FirebaseDatabase database = FirebaseDatabase.getInstance(); //should database be our specific database's name?
-    DatabaseReference myRef = database.getReference();
-
-    //Instantiate the readings and pins
-    final DatabaseReference ledStatus = myRef.child("led1").child("status");
-    final DatabaseReference Humidity = myRef.child("DHT11").child("LxOV6itRV1hggMVrjDi");
-    //explanation of initialization:
-    //final DatabaseReference myVariableName = myRef.child("main node").child("child of main node ");
+    //Initializing the Database
+    DatabaseReference myData = FirebaseDatabase.getInstance().getReference(); // gets us a reference to the root of the Firebase JSON tree
+    DatabaseReference mConditionRef = myData.child("temperature");
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home_control);
 
-        textView1 = findViewById(R.id.homeControlBtn6);
-        textView2 = findViewById(R.id.homeControlBtn7);
-        // led ON/OFF buttons
-        ledStatusON = findViewById(R.id.btn1a_homeControl);
-        ledStatusOFF = findViewById(R.id.btn1b_homeControl);
+        //initializing the UI elements
+        temperature = (TextView) findViewById(R.id.btn7a_homeControl);
+        lightOn = (Button)findViewById(R.id.btn3a_homeControl);
+        lightOff = (Button)findViewById(R.id.btn3b_homeControl);
+    }
 
+    protected void onStart() { //value listener
+        super.onStart();
 
-        // Initalize database reference
-        myDatabase = FirebaseDatabase.getInstance().getReference();
-
-        //Humidity.addValueEventListener(new
-
-
-
-        ledStatus.addValueEventListener(new ValueEventListener() {
+        mConditionRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d("file", "Value is: " + value);
-                textView1.setText(value);
-
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String text = dataSnapshot.getValue(String.class);
+                temperature.setText(text);
             }
 
             @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("file", "Failed to read value.", error.toException());
-            }
-        });
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-        ledStatusOFF.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ledStatus.setValue("OFF");
-            }
-        });
-
-        ledStatusON.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ledStatus.setValue("ON");
             }
         });
 
 
+        lightOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)  {
+                mConditionRef.setValue("hot"); //sets the value in the temp textbox
+            }
+        });
 
 
-
-
-
-
+        lightOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)  {
+                mConditionRef.setValue("cold"); //sets the value in the temp textbox
+            }
+        });
     }
 
 
 }
+

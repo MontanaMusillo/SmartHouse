@@ -21,6 +21,10 @@
             "package_name": "com.example.smarthouse",
             "certificate_hash": "d5e9575050189715b8ee0033a570f4e84ca52867"
           }
+        },
+        {
+          "client_id": "804849015748-ro9p82jua3lbp57jba9ncjsecrrafv27.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
