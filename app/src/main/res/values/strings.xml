@@ -11,25 +11,38 @@
 
     <!-- Home Control Submenu  -->
     <string name="menu_homeControl">Home Control</string> <!-- Submenu title -->
-    <string name="btn1_homeControl">Windows</string>
+    <string name="btn1_homeControl">Window One</string>
     <string name="btn1a_homeControl">Open</string>
     <string name="btn1b_homeControl">Close</string>
-    <string name="btn2_homeControl">Door</string>
+
+    <string name="btn2_homeControl">Window Two</string>
     <string name="btn2a_homeControl">Open</string>
     <string name="btn2b_homeControl">Close</string>
-    <string name="btn3_homeControl">Lights</string>
-    <string name="btn3a_homeControl">On</string>
-    <string name="btn3b_homeControl">Off</string>
-    <string name="btn4_homeControl">Gas Sensor Reading</string>
-    <string name="btn4a_homeControl">Smoke</string>
-    <string name="btn4b_homeControl">Alcohol</string>
-    <string name="btn4c_homeControl">CO2</string>
-    <string name="btn5_homeControl">Elevator</string>
-    <string name="btn5a_homeControl">First Floor</string>
-    <string name="btn5b_homeControl">Second Floor</string>
 
-    <string name="btn6_homeControl">Humidity</string>
-    <string name="btn7_homeControl">Temperature</string>
+    <string name="btn3_homeControl">Door</string>
+    <string name="btn3a_homeControl">Open</string>
+    <string name="btn3b_homeControl">Close</string>
+
+    <string name="btn4_homeControl">Floor One: Lights</string>
+    <string name="btn4a_homeControl">On</string>
+    <string name="btn4b_homeControl">Off</string>
+
+    <string name="btn5_homeControl">Floor Two: Lights</string>
+    <string name="btn5a_homeControl">On</string>
+    <string name="btn5b_homeControl">Off</string>
+
+    <string name="btn6_homeControl">Gas Sensor Reading</string>
+    <string name="btn6a_homeControl">Smoke</string>
+    <string name="btn6b_homeControl">Alcohol</string>
+    <string name="btn6c_homeControl">CO2</string>
+
+    <string name="btn7_homeControl">Elevator</string>
+    <string name="btn7a_homeControl">First Floor</string>
+    <string name="btn7b_homeControl">Second Floor</string>
+
+    <string name="btn8_homeControl">Humidity</string>
+
+    <string name="btn9_homeControl">Temperature</string>
 
 
 
