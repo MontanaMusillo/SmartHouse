@@ -2,6 +2,7 @@ package com.example.smarthouse;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,13 +12,14 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.core.Tag;
 
 
 public class homeControl extends AppCompatActivity
 {
-    TextView temperature; // id: btn7a_homeControl
+    TextView temperature;
     TextView humidity;
-    //TextView bpm;
+    TextView fanSpeed;
 
     Button window1Open; // id: @+id/btn1a_homeControl
     Button window1Close; // id: @+id/btn1b_homeControl
@@ -29,27 +31,25 @@ public class homeControl extends AppCompatActivity
     Button light2On; // id: btn5a_homeControl
     Button light2Off; // id: btn5b_homeControl
 
-    Button elevator1; //id: btn5a_homeControl
-    Button elevator2; //id: btn5b_homeControl
+    //Button elevator1; //id: btn5a_homeControl
+    //Button elevator2; //id: btn5b_homeControl
 
     //Initializing the Database
-    DatabaseReference myData = FirebaseDatabase.getInstance().getReference(); // gets us a reference to the root of the Firebase JSON tree
+    DatabaseReference myData = FirebaseDatabase.getInstance().getReference();
+    // gets us a reference to the root of the Firebase JSON tree
 
     //setting up the nodes
-    DatabaseReference mConditionRef = myData.child("temperature"); //"TEST_READING"
-
     DatabaseReference light_1f = myData.child("f1_light");
     DatabaseReference light_2f = myData.child("f2_light");
     DatabaseReference window1 = myData.child("window1");
     DatabaseReference window2 = myData.child("window2");
+    //DatabaseReference humidityRead  = myData.child("Humidity");
+    DatabaseReference fanSpeedRead  = myData.child("fanSpeed");
+    DatabaseReference temp  = myData.child("temperature");
 
-    DatabaseReference humidityRead   = myData.child("Humidity");
-    DatabaseReference gasRead        = myData.child("gasReading");
-    DatabaseReference fanSpeedRead   = myData.child("fanSpeed");
-    //DatabaseReference temp = myData.child("temperature");
-
+    //DatabaseReference gasRead        = myData.child("gasReading");
     //DatabaseReference elevator_g = myData.child("g_elevator");
-
+    // DatabaseReference mConditionRef = myData.child("Temperature"); //"TEST_READING"
 
     //  ~  KEY CONVENTION  ~
     // f1 --> first floor
@@ -76,23 +76,52 @@ public class homeControl extends AppCompatActivity
         light2On = (Button)findViewById(R.id.btn5a_homeControl);
         light2Off = (Button)findViewById(R.id.btn5b_homeControl);
 
-        elevator1 = (Button)findViewById(R.id.btn7a_homeControl);
-        elevator2 = (Button)findViewById(R.id.btn7b_homeControl);
+        //elevator1 = (Button)findViewById(R.id.btn7a_homeControl);
+        //elevator2 = (Button)findViewById(R.id.btn7b_homeControl);
 
-        temperature = (TextView) findViewById(R.id.btn9a_homeControl);
+        temperature = (TextView)findViewById(R.id.btn9a_homeControl);
+        //humidity =(TextView)findViewById(R.id.btn8a_homeControl);
+        fanSpeed = (TextView)findViewById(R.id.btn10a_homeControl);
 
     }
 
     protected void onStart() { //value listener
         super.onStart();
 
-        mConditionRef.addValueEventListener(new ValueEventListener() {
+        temp.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String text = dataSnapshot.getValue(String.class);
-                temperature.setText(text);
-                //humidity.setText(text);
 
+                Integer value = dataSnapshot.getValue(Integer.class);
+                temperature.setText(" " + value);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                  }
+        });
+
+/*
+        humidityRead.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Integer value = dataSnapshot.getValue(Integer.class);
+                humidity.setText(" " + value);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+*/
+
+        fanSpeedRead.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Integer value = dataSnapshot.getValue(Integer.class);
+                fanSpeed.setText(" " + value);
             }
 
             @Override

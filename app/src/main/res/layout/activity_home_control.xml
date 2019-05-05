@@ -52,7 +52,8 @@
                 android:textSize="20sp"
                 android:textAllCaps="false"
                 android:id="@+id/btn1a_homeControl"
-                android:text="@string/btn1a_homeControl">
+                android:text="@string/btn1a_homeControl"
+                 >
             </Button>
 
             <Button
@@ -260,7 +261,7 @@
 
 
 
-    <LinearLayout
+    <!-- LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -301,10 +302,10 @@
             android:text="@string/btn7b_homeControl" >
         </Button>
 
-    </LinearLayout>
+    </LinearLayout -->
 
 
-    <LinearLayout
+    <!-- LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -335,9 +336,9 @@
             android:layout_width="250dp"
             />
 
-    </LinearLayout>
+    </LinearLayout-->
 
-    <LinearLayout
+    <!-- LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -364,11 +365,10 @@
             android:gravity="start"
             android:textColor="@android:color/black"
             android:textSize="25sp"
-            android:text="Humidity"
             android:id="@+id/btn8a_homeControl"
             />
 
-    </LinearLayout>
+    </LinearLayout -->
 
 
     <LinearLayout
@@ -399,11 +399,43 @@
             android:textColor="@android:color/black"
             android:textSize="25sp"
             android:id="@+id/btn9a_homeControl"
-            android:text="temperature"
+
             />
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:dividerPadding="@dimen/default_gap"
+        android:divider="@android:color/black" >
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/btn10_homeControl"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:id="@+id/btn10a_homeControl"
+            />
+
+    </LinearLayout>
 
 
 <ImageView
@@ -411,8 +443,8 @@
     android:layout_height="250dp"
     android:layout_gravity="center"
     android:layout_marginTop="15dp"
-    android:background="@drawable/house"/> v b
-<TextView
+    android:background="@drawable/house"/>
+<!--TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
@@ -422,6 +454,6 @@
     android:textColor="@android:color/black"
     android:layout_gravity="center"
     >
-</TextView>
+</TextView-->
 
 </LinearLayout>
