@@ -1,7 +1,19 @@
+//Firebase content found via:
+// https://www.youtube.com/watch?v=71H9-MRXYOE
+//https://medium.com/coinmonks/arduino-to-android-real-time-communication-for-iot-with-firebase-60df579f962
+// and various Google Firebase and Android Studio official tutorials and white-pages.
+
+//Firebase Includes and Packages:
 package com.example.smarthouse;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+//Normal Includes, Imports, and Packages:
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -12,6 +24,8 @@ import android.graphics.Color;
 public class MainActivity extends AppCompatActivity
 //implements View.OnClickListener
 {
+
+
 
 
     @Override
@@ -64,4 +78,12 @@ public class MainActivity extends AppCompatActivity
         startActivity(newActivity);
 
     }
+
+
+
+
+
+
+
+
 }
